@@ -17,7 +17,13 @@ get '/ollie' do
   "Ollie is my pair partner today."
 end
 
-get '/duck' do
+get '/random-duck' do
   @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
+end
+
+get '/named-duck' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
