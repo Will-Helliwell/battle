@@ -22,8 +22,14 @@ get '/random-duck' do
   erb(:index)
 end
 
-get '/named-duck' do
+post '/named-duck' do   # post = what can that webpage receive (get vs. post)
   p params
   @name = params[:duckname]
   erb(:index)
+end
+
+get '/mad-duck' do
+  p params
+  @name = params[:duckname]
+  erb(:index2)
 end
