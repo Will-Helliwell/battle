@@ -24,6 +24,6 @@ end
 
 get '/named-duck' do
   p params
-  @name = params[:name]
+  @name = params[:duckname]
   erb(:index)
 end
